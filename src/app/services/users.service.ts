@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { CounterService } from './counter.service';
 
 @Injectable()
-export class UserService{    
+export class UsersService{    
     public activeUsers: string[] = ['Max', 'Anna'];
     public inactiveUsers: string[] = ['Chris', 'Manu'];
 
