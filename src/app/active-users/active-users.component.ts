@@ -7,13 +7,12 @@ import { UsersService } from '../services/users.service';
   styleUrls: ['./active-users.component.css']
 })
 export class ActiveUsersComponent implements OnInit {
-  private users: string[] = []
-  @Output() userSetToInactive = new EventEmitter<number>();
+  private users: string[] = []  
 
   constructor(private usersService:UsersService){}
 
-  onSetToInactive(id: number) {
-    this.userSetToInactive.emit(id);
+  onSetToInactive(id: number) {    
+    this.usersService.onSetToInactive(id);
   }
 
   ngOnInit(){
